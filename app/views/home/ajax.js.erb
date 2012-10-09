@@ -1,0 +1,11 @@
+<% if params[:page_number] %>
+    $("#ajax").append("<%= escape_javascript(render 'home/ajax', :collection => @friends, :locals => {:product_id => @product_id, :send => @send}) %>");
+    
+<% else %>
+    $("#ajax").html(" ");
+    $("#ajax").html("<%= escape_javascript(render 'home/ajax', :collection => @friends, :locals => {:product_id => @product_id, :send => @send}) %>");
+    $(".ajax_overlay").show();
+    $("#ajax").show();
+    $("#ajax1").show();
+<% end %>
+

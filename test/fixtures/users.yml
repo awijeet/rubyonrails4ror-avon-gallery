@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  fbid: MyString
+  email: MyString
+  oauth_access_token: MyString
+
+two:
+  fbid: MyString
+  email: MyString
+  oauth_access_token: MyString

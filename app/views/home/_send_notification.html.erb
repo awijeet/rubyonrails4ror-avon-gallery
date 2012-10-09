@@ -1,0 +1,10 @@
+<script>
+  function sendRequestToRecipients() {
+        var user_ids = "<%= @friend %>";
+        FB.ui({method: 'apprequests',
+          message: 'My Great Request',
+          to: user_ids
+        }, requestCallback);
+      }
+      sendRequestToRecipients();
+</script>

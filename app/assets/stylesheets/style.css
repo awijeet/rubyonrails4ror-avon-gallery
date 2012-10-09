@@ -1,0 +1,210 @@
+body {
+	background: url("/assets/body-bg.png") repeat scroll 0 0 transparent;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+#wrap {
+	background: url("/assets/main-bg.jpg") no-repeat fixed center 0 transparent;
+	margin: 0 auto;
+	width: 810px;
+	padding-top:40px;
+	position:relative;
+	min-height: 900px;
+	background-size: cover;
+}
+@font-face {
+font-family:Monotype Corsiva;
+src:url(/MTCORSVA.TTF);
+}
+body, ul, li, p, h1, h2, h3, h4, h5, h6, img, a {
+	margin:0;
+	padding:0;
+	list-style:none;
+	border:0;
+	text-decoration:none;
+}
+body, a {
+	color:#fff;
+}
+:focus {
+	outline:none;
+}
+.clear {
+	clear:both;
+}
+#navigation {
+	background: url("/assets/nav-bg.png") repeat-x scroll 0 0 transparent;
+	box-shadow: 0 5px 5px #000000;
+	height: 43px;
+	width: 100%;
+}
+#navigation ul {
+	height: 43px;
+	margin: 0 auto;
+	width: 810px;
+}
+#navigation ul li {
+	background: url("/assets/nav-arrow.png") no-repeat scroll 30px center transparent;
+	float: left;
+}
+#navigation ul li a {
+	font: 14px/45px Arial,Helvetica,sans-serif;
+	margin: 0 60px;
+}
+.logo {
+	margin: 45px 0 10px 45px;
+}
+.main_cont {
+}
+.left_cont {
+	width:360px;
+	float:left;
+}
+.model_img {
+	margin-top:120px;
+	line-height:0;
+	margin-bottom: -37px;
+}
+.right_cont {
+	width:448px;
+	float:left;
+}
+.gift_jewel {
+	text-align: center;
+}
+.cont_box {
+	margin:0 40px;
+}
+.cont_box p {
+	font: 25px/25px "Monotype Corsiva";
+	text-align: center;
+	text-shadow: 2px 2px 2px #000000;
+}
+.enter_bttn {
+	margin: 15px 0;
+	text-align: center;
+}
+.img_thumbs ul li {
+	float: left;
+	margin-left: 5px;
+	width:105px;
+}
+.img_thumbs ul li span {
+	 background-color: rgba(0, 0, 0, 0.4);
+    display: block;
+    text-align: center;
+    text-shadow: 1px 1px 1px #000000;
+}
+.img_thumbs ul li span.jname {
+	font: 16px/20px "Monotype Corsiva";
+}
+.img_thumbs ul li span.jname2 {
+	font: 16px/18px "Monotype Corsiva";
+}
+.img_thumbs ul li a {
+	background-color: rgba(255, 255, 255, 0.4);
+	border: 1px solid #D2D2D2;
+	border-radius: 3px;
+	display:block;
+	line-height:0;
+}
+.footer {
+	background-color: rgba(0, 0, 0, 0.4);
+	border: 1px solid #D2D2D2;
+	padding: 0 15px;
+	position: absolute;
+	width: 778px;
+	height:35px;
+	bottom: 0;
+	left: 0;
+}
+.footer p, .footer p a {
+	display: inline;
+	font: 14px/35px arial;
+	text-shadow: 1px 1px 1px #000000;
+}
+.footer p a:hover {
+	text-decoration:underline;
+}
+.ftr_right {
+	float: right;
+}
+.ftr_left{
+	float:left;}
+
+
+/*---------------inner page-----------------------*/
+.inner_wrap {
+    margin: 0 auto;
+    width: 660px;
+}
+
+.jewel_box {
+    float: left;
+    margin-bottom: 30px;
+    margin-right: 35px;
+}
+.jewel_box.right{
+	margin-right:0;}
+.jewel_img {
+    background-color: #FFFFFF;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 0 2px 2px #FFFFFF;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+.gift_bttn,
+.tag_bttn{
+	background: url("/assets/bttn-bg.png") repeat-x scroll 0 0 transparent;
+    border: 1px solid #AD0067;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 5px 5px #000000;
+    cursor: pointer;
+    font: 20px/29px arial;
+	color: #FFFFFF;
+    margin-bottom: 10px;
+    text-align: center;
+    text-shadow: 1px 1px 1px #000000;
+    width: 100%;}
+	
+.slider_cont{
+    padding: 0 75px;
+    width: 660px;
+	margin-bottom: 30px;}
+.bx-prev{
+	background: url("/assets/prev.png") no-repeat scroll 0 0 transparent;
+    display: block;
+    height: 96px;
+    left: 15px;
+    position: absolute;
+    text-indent: -9999px;
+    top: 30%;
+    width: 38px;}
+.bx-next{
+	background: url("/assets/next.png") no-repeat scroll 0 0 transparent;
+    display: block;
+    height: 96px;
+    right: 15px;
+    position: absolute;
+    text-indent: -9999px;
+    top: 30%;
+    width: 38px;}
+/*------------------------------------------------*/
+.cont_wrap {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px 10px 10px 10px;
+    margin: 15px;
+    padding: 20px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    border: 1px solid #ffffff;
+}
+.cont_wrap h2{
+  color: #ffffff;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-family:georgia;
+}
+.cont_wrap p{
+  margin-bottom: 10px;
+    font: 15px/20px georgia;
+}

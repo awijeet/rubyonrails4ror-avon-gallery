@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AvonGallery</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  
+  <% if Rails.env.production? %>
+  <!-- Following code is to remove scroll across -->
+  	
+ <script type="text/javascript" charset="utf-8">
+window.fbAsyncInit = function() 
+{
+    FB.init({ appId: '337524533004133', 
+    status: true, 
+    cookie: true,
+    xfbml: true,
+    oauth: true});
+
+    FB.Canvas.setAutoResize();
+    FB.Canvas.setAutoGrow();
+}
+    </script>
+ 
+  <!-- Above code is to remove scroll across -->
+  <!-- Following code is to redirect apps to facebook  -->
+  	<script>
+	if(window.top==window){
+		window.location.href = "<%= REDIRECT_URL %>";
+	}else{
+		
+	}
+	</script>
+	<!-- Following code is to redirect apps to facebook  -->
+  <% end %>
+  
+</head>
+<body>
+	 <div class="ajax_overlay"></div>
+<div id="wrap">
+  <div id="navigation">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/about_us">About the Contest</a></li>
+      <li><a href="/privacy_policy">T &amp; C</a></li>
+      <li><a href="/gallery">Product Catalog</a></li>
+    </ul>
+  </div>
+  <!--end navigation -->
+  <div class="logo"><a href="#"><img src="/assets/logo.png" alt="" /></a></div>
+  <!--end logo -->
+  <%= yield %>
+  <div class="footer">
+    <p class="ftr_left"><a href="http://www.in.avon.com/PRSuite/pr_ebrochure.page ">Check out the Brochure</a></p>
+    <p class="ftr_right">For more information call 1860-500-2866 or <a href="http://www.in.avon.com/PRSuite/needARep.page">login</a> to place an order NOW!</p>
+  </div>
+  <!--end footer -->
+</div>
+<!--end wrap -->
+</body>
+</html>
+<style>
+	a{
+		color: white!important;
+	}
+</style>

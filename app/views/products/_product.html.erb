@@ -1,0 +1,25 @@
+<!-- <div class="product">
+<%= image_tag product.image.url(:medium) , :size => "186x187"%>
+<div class="botton">
+	<%= link_to "Send as gift", "#", :class => "send_as_gift", :id => product.id %> |
+	<%= link_to "Tag your friend", "#", :class => "tag_your_friend", :id => product.id %>
+</div>
+</div> -->
+
+<% if zone % 3 == 0 %>
+	<div class="jewel_box right">
+    <div class="jewel_img"><%= image_tag product.image.url(:medium) , :size => "186x187", :title => product.name %></div><!--end jewel_img -->
+    <button class="gift_bttn" id ="<%= product.id %>">Gift a Jewel</button><!--end gift_bttn -->
+    <button class="tag_bttn" id ="<%= product.id %>">Tag</button><!--end tag_bttn -->
+    </div><!--end2 jewel_box -->
+    <div class="clear"></div>
+<% else %>
+	<div class="jewel_box">
+    <div class="jewel_img"><%= image_tag product.image.url(:medium) , :size => "186x187", :title => product.name %></div><!--end jewel_img -->
+    <button class="gift_bttn" id ="<%= product.id %>" >Gift a Jewel</button><!--end gift_bttn -->
+    <button class="tag_bttn" id ="<%= product.id %>" >Tag</button><!--end tag_bttn -->
+    </div><!--end2 jewel_box -->
+<% end %>
+
+
+    

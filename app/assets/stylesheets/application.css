@@ -1,0 +1,73 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+.product{
+	width: 400px;
+	overflow: hidden;
+	float: left; 
+}
+.botton{
+	padding-left: 45px;
+}
+
+.friend{
+	float: left;
+	margin-left: 10px;
+	font-size: 11px;
+	width: 60px;
+	height: 110px;
+	overflow: hidden;
+	text-align: center;
+}
+#friends_ids_{
+	margin-left: 10px;
+	top: -7px;
+	
+}
+#ajax1{
+	background-color: white;
+    border-radius: 10px 10px 10px 10px;
+    height: 445px;
+    left: 0;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 10px;
+    position: absolute;
+    right: 0;
+    top: 27%;
+    width: 630px;
+    z-index: 3;
+    display: none;
+}
+#ajax{
+	background-color: white;
+    color: gray;
+    display: none;
+    height: 399px;
+    overflow-y: scroll;
+    padding-top: 30px;
+    width: 666px;
+}
+
+.ajax_overlay{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	background-color: rgba(0,0,0,0.5);
+	display: none;
+
+}

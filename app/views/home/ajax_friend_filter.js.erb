@@ -1,0 +1,4 @@
+$("#rec").html(" ");
+<% @friends.each do |friend| %>
+    $("#rec").append("<%= escape_javascript(render(:partial => "friends/friend", :locals => { :friend => friend })) %>");
+<% end %>

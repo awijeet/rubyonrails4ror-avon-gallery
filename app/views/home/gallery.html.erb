@@ -1,0 +1,55 @@
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.inner_wrap').bxSlider();
+  });
+</script>
+
+<!--  <div id="gallery">
+ <% if @products.empty? %>
+ <% else %>
+  	<% @products.each do |product| %>
+ 		<%#= render product %>
+ 	<% end %>
+ <% end %>
+ </div>
+ <div id="ajax"></div> -->
+ <% i = 1 %>
+ <% 
+	 end_point = 0
+  %>
+ <div id="gallery">
+	<% if @products.empty? %>
+ 	<% else %>
+	 <div class="main_cont">
+	    <div class="inner_wrap">
+	    
+		  <% @products.each do |product| %>
+		   <% if i == 1
+		   	end_point = 1
+		   	 %>
+		   	 <div class="slider_cont">  
+		   <% end %>
+ 			<%= render :partial => "products/product", :object => product, :locals => { :zone => i } %>
+ 			<% if i == 6 
+ 				end_point = 0
+ 			%>
+ 					    </div><!--end1 slider_cont -->  
+ 			<% end %>
+ 			<% 
+ 				i = i+1
+ 				if i == 7
+ 			    	i = 1 
+ 			    end 		 
+ 			%>
+ 		  <% end %>  
+         <% if end_point == 1%>
+         	</div>
+         <% end %>  
+	    </div><!--end inner_wrap -->
+	  <div class="clear"></div>
+	  </div>
+  <% end %>
+ </div>
+ <div id="ajax1">
+ <div id="ajax"></div>
+ </div>

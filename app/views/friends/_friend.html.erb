@@ -1,0 +1,5 @@
+                      <div class="friend">
+				<%= check_box_tag 'friends_ids[]', friend['id'] %>
+				<%= image_tag "http://graph.facebook.com/#{friend['id']}/picture"  %><br />
+				<%= friend["name"] %>
+			</div>

@@ -1,0 +1,16 @@
+<% if @friends.empty? %>
+	
+<% else %>
+	<%= form_tag("/notify", :method => "post") do %>
+		<% @friends.each do |friend| %>
+		<%= render :partial => "friends/friend", :locals => { :friend => friend } %>
+			<!--<div class="friend">
+				<%= check_box_tag 'friends_ids[]', friend['id'] %>
+				<%= image_tag "http://graph.facebook.com/#{friend['id']}/picture"  %><br />
+				<%= friend["name"] %>
+			</div>-->
+		<% end %>
+		<div style="clear:both"> </div>
+		<%= submit_tag("Notify Friends") %>
+	<% end %>
+<% end %>

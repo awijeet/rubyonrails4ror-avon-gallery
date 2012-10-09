@@ -1,0 +1,66 @@
+<% if @friends.empty? %>
+	
+<% else %>
+	<% if @page_number.nil? %>
+	<%= form_tag("/notify", :method => "post") do %>
+	<%= submit_tag("Notify Friends") %>
+	<input name = "search" class="search" id="myInput" type="text" style="width: 150px;float: right;margin-right: 30px;">
+	<div style="clear:both"> </div>
+	<div id="rec">
+		<% @friends.each do |friend| %>
+			<%= render :partial => "friends/friend", :locals => { :friend => friend } %>
+		<% end %>
+		<div style="clear:both"> </div>
+		<div class="load_more" id="1">Load more</div>
+	</div>	
+		<input type="hidden" name="product_id" value="<%= @product_id %>">
+		<input type="hidden" name="send" value="<%= @send %>">
+	<% end %>
+<script>
+	//function filter(str){
+	//	str_val = str.value;
+	//	$.get("ajax_friend_filter", { filter_string: str_val } );
+	//}
+	
+
+	$(document).ready(function() {
+	        var typingTimer;                //timer identifier
+		var doneTypingInterval = 2000;  //time in ms, 5 second for example
+		//on keyup, start the countdown
+		$('#myInput').keyup(function(){
+		    clearTimeout(typingTimer);
+		    if ($('#myInput').val) {
+			typingTimer = setTimeout(doneTyping, doneTypingInterval);
+		    }
+		});
+		//user is "finished typing," do something
+		function doneTyping () {
+			str_val = $('#myInput').val();
+			$.get("ajax_friend_filter", { filter_string: str_val } );
+		    //do something
+		}
+
+	});
+</script>
+	<% else %>
+		<% @page_number = @page_number.to_i+1 %>
+	<% @friends.each do |friend| %>
+		<%= render :partial => "friends/friend", :locals => { :friend => friend } %>
+	<% end %>
+	        <div style="clear:both"> </div>
+		<% if @page_number != 0 %>
+			<div class="load_more" id="<%= @page_number %>">Load more</button>
+		<% end %>
+	<% end %>
+<% end %>
+<script type="text/javascript">
+	$(".load_more").click(function(){
+		$(this).text("Loading more friends");
+	   page_number = $(this).attr("id");
+	   $.ajaxSetup({async: false});
+		$.post('/ajax',{ product_id: id, send: "gift", page_number: page_number }, function(data) {
+  			//$('.result').html(data);				
+		});
+	    $(this).text(" ");	
+	});
+</script>
